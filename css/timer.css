@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    margin: 0;
+}
+
+#datetime-picker {
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 250px;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+#datetime-picker:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+#datetime-picker:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+button[data-start] {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[data-start]:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+button[data-start]:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+button[data-start]:disabled {
+    background-color: #cccccc;
+    color: #888888;
+    cursor: not-allowed;
+}
+
+.timer {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    background-color: #ffffff;
+    padding: 30px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.value {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #2c3e50;
+    font-variant-numeric: tabular-nums; 
+}
+
+.label {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #7f8c8d;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}

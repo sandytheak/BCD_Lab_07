@@ -1,0 +1,79 @@
+/* 1. Центруємо форму на весь екран і додаємо приємний фон сторінці */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. Оформлюємо саму форму як білу картку з тінню */
+.feedback-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Flexbox для зручного розміщення елементів вертикально */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    width: 100%;
+    max-width: 400px; /* Форма не буде занадто широкою на великих екранах */
+    box-sizing: border-box;
+}
+
+/* 3. Стилізуємо лейбли (написи "Email" та "Message") */
+.feedback-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #333;
+    gap: 8px; /* Відступ між текстом і самим полем вводу */
+}
+
+/* 4. Спільні стилі для інпуту та текстової області */
+.feedback-form input,
+.feedback-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit; /* Успадковує шрифт від body */
+    transition: border-color 0.3s ease;
+}
+
+/* Забороняємо розтягувати textarea по горизонталі, тільки по вертикалі */
+.feedback-form textarea {
+    resize: vertical;
+}
+
+/* 5. Ефект при кліку (фокусі) на поле вводу */
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    outline: none;
+    border-color: #4CAF50; /* Зелений колір акценту */
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2); /* Легке світіння навколо */
+}
+
+/* 6. Красива кнопка відправки */
+.feedback-form button {
+    padding: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Ефект при наведенні мишки на кнопку */
+.feedback-form button:hover {
+    background-color: #45a049;
+}
